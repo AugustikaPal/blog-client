@@ -1,0 +1,234 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #151515;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+header nav .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+header nav ul li button:hover {
+    background-color: #d32f2f;
+}
+
+/* Edit Blog Form Styles */
+main {
+    padding: 80px 20px 40px; /* Top padding to prevent overlap with fixed header */
+    max-width: 800px;
+    margin:  auto;
+    
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #007bb5;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    margin-right: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+   
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        justify-content: center; /* Center the navigation items on smaller screens */
+    }
+
+    header nav .logo h1 {
+        font-size: 20px; /* Adjust logo font size */
+    }
+
+    header nav ul li {
+        margin: 5px; /* Adjust spacing between nav items */
+    }
+
+    main {
+        padding: 100px 20px 20px; /* Add more padding to avoid overlap with header */
+        max-width: 90%; /* Allow more space for the form on smaller screens */
+        margin-top: 30px;
+    }
+
+    form {
+        gap: 10px; /* Reduce spacing between form elements */
+        margin-top: 50px;
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 14px; /* Adjust input and textarea font size */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width */
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Make buttons fill container width */
+    }
+}
+
+@media (max-width: 480px) {
+    header nav .logo h1 {
+        font-size: 18px; /* Further reduce logo font size */
+    }
+
+    main {
+        padding: 120px 10px 10px; /* Adjust padding for extra small screens */
+        max-width: 100%; /* Allow the form to use full screen width */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 12px; /* Adjust input and textarea font size */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    .buttons-container {
+        gap: 5px; /* Reduce gap between buttons */
+    }
+}

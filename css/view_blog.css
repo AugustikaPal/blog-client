@@ -1,0 +1,267 @@
+/* body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.906);
+}
+
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-content {
+    width: 60%;
+    margin: 20px auto;
+   background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-content img {
+    width: 40%;
+    height: 40%;
+    margin:auto;
+}
+
+.blog-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.blog-actions {
+    margin-top: 20px;
+}
+
+#like-button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#like-button:hover {
+    background-color: #ff3333;
+}
+
+.comment-section {
+   
+    margin: 30px 0 auto;
+}
+
+.comment-section h3 {
+   margin: auto;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#comment-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#comment-input {
+    width: 80%;
+    height: 100px;
+    margin:10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#comment-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#comment-button:hover {
+    background-color: #45a049;
+} */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.906);
+}
+
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.blog-content {
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for header */
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.blog-content img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: auto;
+}
+
+.blog-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.blog-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#like-button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#like-button:hover {
+    background-color: #ff3333;
+}
+
+#like-count {
+    margin-left: 15px;
+    font-size: 1em;
+}
+
+.comment-section {
+    margin: 30px auto;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#comment-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#comment-input {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#comment-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#comment-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+    .blog-content {
+        width: 95%;
+        margin: 80px auto 20px auto; /* Adjusted margin for smaller screens */
+    }
+
+    .blog-content h2 {
+        font-size: 1.5em;
+    }
+
+    #like-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #like-count {
+        font-size: 0.9em;
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+
+    #comment-input {
+        height: 80px;
+    }
+
+    #comment-button {
+        width: 100%;
+    }
+}

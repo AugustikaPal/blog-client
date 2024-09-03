@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Blog Application</title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Include CKEditor -->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>BLOGRESS</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#create-blog">Create Blog</a></li>
+                <li><a href="myblogs.html">My Blogs</a></li>
+                <li>
+                    <button id="logoutButton">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>WELCOME TO BLOGRESS</h1>
+                <br/>
+                <h3>Your story is unique, and the world is waiting to hear it. Write with passion, share with courage, and let your words inspire change.</h3>
+            </div>
+        </section>
+
+        <section id="blogs">
+            <h2>Latest Blogs</h2>
+            <div id="blog-container" class="blog-container">
+                <!-- Blog entries will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="create-blog">
+            <h2>Create a New Blog</h2>
+            <form id="blogForm" enctype="multipart/form-data">
+                <label for="title">Blog Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
+
+                <label for="files">Upload Images:</label>
+                <input type="file" id="files" name="files" multiple>
+
+                <button type="submit">Create Blog</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Application</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" style="display:none;">
+        <div class="toast-content" id="toastMessage"></div>
+    </div>
+
+    <style>
+        /* Toast Notification Styles */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            transform: translateY(100%);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script src="js/home.js"></script>
+
+    <!-- Initialize CKEditor -->
+    <script>
+        CKEDITOR.replace('content');
+    </script>
+
+    <!-- Toast Notification Script -->
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.style.display = 'block';
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 500);
+            }, 3000); // Hide after 3 seconds
+        }
+    </script>
+
+</body>
+
+</html>

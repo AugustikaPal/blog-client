@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs - Blog Application</title>
+    <link rel="stylesheet" href="css/myblogs.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>BLOGRESS</h1>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="myblogs.html">My Blogs</a></li>
+                <li><!-- Add this to your home.html -->
+                    <button id="logoutButton">Logout</button>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="my-blogs">
+            <h2>My Blogs</h2>
+            <div id="my-blog-container" class="blog-container">
+                <!-- User blogs will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Application</p>
+    </footer>
+
+    <script src="js/myblogs.js"></script> <!-- Link to the new JS file -->
+</body>
+</html>
