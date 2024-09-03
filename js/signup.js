@@ -15,7 +15,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
     };
 
     try {
-        const response = await fetch("http://localhost:8080/public/signup", {
+        const response = await fetch("https://blog-server-production-4e9b.up.railway.app/public/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

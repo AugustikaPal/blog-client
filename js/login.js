@@ -11,7 +11,7 @@
 //     };
 
 //     try {
-//         const response = await fetch("http://localhost:8080/public/login", {
+//         const response = await fetch("https://blog-server-production-4e9b.up.railway.app/public/login", {
 //             method: "POST",
 //             headers: {
 //                 "Content-Type": "application/json"
@@ -55,7 +55,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     };
 
     try {
-        const response = await fetch("http://localhost:8080/public/login", {
+        const response = await fetch("https://blog-server-production-4e9b.up.railway.app/public/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

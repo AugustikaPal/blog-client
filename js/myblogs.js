@@ -22,7 +22,7 @@ function fetchUserBlogs() {
         return;
     }
 
-    fetch('http://localhost:8080/post/myblogs', {
+    fetch('https://blog-server-production-4e9b.up.railway.app/post/myblogs', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function deleteBlog(blogId) {
     }
 
     if (confirm('Are you sure you want to delete this blog?')) {
-        fetch(`http://localhost:8080/post/id/${blogId}`, {
+        fetch(`https://blog-server-production-4e9b.up.railway.app/post/id/${blogId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`

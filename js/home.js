@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchBlogs() {
-    fetch('http://localhost:8080/post/allblog')
+    fetch('https://blog-server-production-4e9b.up.railway.app/post/allblog')
         .then(response => response.json())
         .then(blogs => {
             const blogContainer = document.getElementById('blog-container');
@@ -84,7 +84,7 @@ function createBlog() {
         alert('Invalid JWT token. Please log in again.');
         return; // Prevent the request from being sent
     }
-    fetch('http://localhost:8080/post/create', {
+    fetch('https://blog-server-production-4e9b.up.railway.app/post/create', {
         method: 'POST',
         body: formData,
         headers: {

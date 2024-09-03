@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fetch the blog details and populate the form
-    fetch(`http://localhost:8080/post/id/${blogId}`, {
+    fetch(`https://blog-server-production-4e9b.up.railway.app/post/id/${blogId}`, {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             formData.append('files', imageFile);
         }
 
-        fetch(`http://localhost:8080/post/id/${blogId}`, {
+        fetch(`https://blog-server-production-4e9b.up.railway.app/post/id/${blogId}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`

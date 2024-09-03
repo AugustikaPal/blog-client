@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userName = localStorage.getItem('userName');
     
 
-    fetch(`http://localhost:8080/post/id/${blogId}`)
+    fetch(`https://blog-server-production-4e9b.up.railway.app/post/id/${blogId}`)
         .then(response => response.json())
         .then(blog => {
             document.getElementById('blog-title').innerText = blog.title;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('like-count').innerText = `${likeCount} Like${likeCount === 1 ? '' : 's'}`;
                 likeButton.classList.toggle('liked', hasLiked);
 
-                fetch(`http://localhost:8080/post/like/${blogId}`, {
+                fetch(`https://blog-server-production-4e9b.up.railway.app/post/like/${blogId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
